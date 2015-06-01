@@ -112,10 +112,12 @@ end
 --[[---------------------------------------------------------
 	Name: OnMousePressed
 -----------------------------------------------------------]]
-function PANEL:Paint( w, h )
+function PANEL:Paint( )
 
 	if ( !IsValid( self.Entity ) ) then return end
-
+	
+	local w, h = self:GetSize()
+	
 	local x, y = self:LocalToScreen( 0, 0 )
 
 	self:LayoutEntity( self.Entity )
